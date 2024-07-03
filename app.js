@@ -7,6 +7,7 @@ console.log(`
     -*- Calculadora -*-
     1 - Soma
     2 - Subtracao
+    3 - Multiplicacao
 `)
 var operação = prompt('Escolha uma operacao: ')
 var resultado
