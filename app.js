@@ -8,6 +8,8 @@ console.log(`
     1 - Soma
     2 - Subtracao
     3 - Multiplicacao
+    4 - Divisão
+    5 - Porcentagem
 `)
 var operação = prompt('Escolha uma operacao: ')
 var resultado
@@ -15,33 +17,37 @@ var resultado
 numero1 = parseFloat(numero1)
 numero2 = parseFloat(numero2)
 
-if (typeof(numero1) == 'number' || typeof(numero2) == 'number') {
-    //fazer a logica do switch
-    switch(operação){
+    //fazer a logica das operações no switch
+    if (!isNaN(num1) && !isNaN(num2)) {
+    switch (operação) {
         case '1':
-            resultado = numero1 + numero2
-            break
+        resultado = numero1 + numero2
+        console.log(` ${numero1} + ${numero2} = `)
+        break;
         case '2':
-            resultado = numero1 - numero2
-            break
+        resultado = numero1 - numero2
+        console.log(` ${numero1} - ${numero2} = `)
+        break;
         case '3':
-            resultado =  numero1 * numero2
-            break
+        resultado = numero1 * numero2
+        console.log(` ${numero1} X ${numero2} = `)
+        break;
         case '4':
-            if (numero1 == 0 || numero2 == 0){
-                console.log('Erro: Divisão por zero!')
-            } else {
-                resultado =  numero1 / numero2
-            }
-            break
+        if (numero1 ===0 || numero2 ===0) {
+        console.log(" Erro, divisão por 0! ")        
+        }else{
+        resultado = numero1/numero2
+        console.log(` ${numero1} / ${numero2} = `)
+        }
+        break;
         case '5':
-            resultado = (numero1 * numero2)/100
-            break   
+        resultado = numero1 * numero2/100
+        console.log( `${numero1} % ${numero2} = `)
+        break;
         default:
-            console.log( "Operação invalida")
-            resultado = undefined
-            break
-    }
+console.log(" OPERAÇÃO INVALIDA. ")
+        break;
+}
     console.log(resultado)
 } else {
     console.log('numero invalido')
