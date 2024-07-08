@@ -49,5 +49,5 @@ if (!isNaN(numero1) && !isNaN(numero2)) {
 }
     console.log(resultado)
 } else {
-    console.log('numero invalido')
+    console.log('voce não digitou um numero')
 }
